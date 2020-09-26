@@ -8,8 +8,8 @@ import br.com.digitalhouse.Parte_E.Curso
 class Curso(
         val nome: String,
         val codigo: Int,
-        val professorTitular: ProfessorTitular,
-        val professorAdjunto: ProfessorAdjunto,
+        var professorTitular: ProfessorTitular?,
+        var professorAdjunto: ProfessorAdjunto?,
         val limiteDeAlunos: Int,
 ) {
 
