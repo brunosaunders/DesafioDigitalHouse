@@ -1,6 +1,6 @@
 package br.com.digitalhouse.Parte_J
 
-import br.com.digitalhouse.Parte_I.DigitalHouseManager
+import br.com.digitalhouse.Parte_K.DigitalHouseManager
 
 fun main() {
     val digital = DigitalHouseManager()
@@ -28,5 +28,7 @@ fun main() {
         matricularAlunoEmCurso(562, 20002)
         matricularAlunoEmCurso(912, 20002)
         matricularAlunoEmCurso(53, 20002)
+
+        consultarAluno(251)
     }
 }
