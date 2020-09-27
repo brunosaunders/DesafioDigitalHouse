@@ -90,7 +90,8 @@ class DigitalHouseManager {
             else -> if (curso.adicionarAluno(aluno)) {
                 curso.listaAlunosMatriculados.add(aluno)
                 listaMatriculas.add(Matricula(aluno, curso))
-            } else println("O curso já está lotado!")
+
+            } else println("Não foi possível matricular ${aluno.nome} pois o curso ${curso.nome} já está lotado.")
         }
     }
 
@@ -113,7 +114,7 @@ class DigitalHouseManager {
             else -> {
                 curso.professorTitular = professorTitular as ProfessorTitular?
                 curso.professorAdjunto = professorAdjunto as ProfessorAdjunto?
-                println("Professores ${professorTitular.nome} e ${professorAdjunto.nome} alocados com sucesso!")
+                println("Professores ${professorTitular.nome} e ${professorAdjunto.nome} alocados com sucesso no curso ${curso.nome}!")
             }
         }
     }
