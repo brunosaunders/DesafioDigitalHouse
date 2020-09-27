@@ -8,6 +8,7 @@ fun main() {
     digital.apply{
         registrarProfessorTitular("Rogério", "Sena", 152, "Javascript")
         registrarProfessorTitular("Veruska", "Ratts", 821, "DataBinding")
+
         registrarProfessorAdjunto("Mônica", "Geller", 25, 15)
         registrarProfessorAdjunto("Ken", "Adams", 89, 25)
 
