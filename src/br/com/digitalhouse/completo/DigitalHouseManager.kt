@@ -89,12 +89,15 @@ class DigitalHouseManager {
 
             curso == null -> println("Código de curso $codigoCurso não encontrado")
 
-            else -> if (curso.adicionarAluno(aluno)) {
-                curso.listaAlunosMatriculados.add(aluno)
+            else -> try {
+                if (!curso.adicionarAluno(aluno)) throw UnsupportedOperationException()
 
+                curso.listaAlunosMatriculados.add(aluno)
                 listaMatriculas.add(Matricula(aluno, curso))
 
-            } else println("Não foi possível matricular ${aluno.nome} pois o curso ${curso.nome} já está lotado.")
+            } catch (e: java.lang.UnsupportedOperationException) {
+                println("Não foi possível matricular ${aluno.nome} pois o curso ${curso.nome} já está lotado.")
+            }
         }
     }
 
